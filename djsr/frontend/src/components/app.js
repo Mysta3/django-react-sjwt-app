@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import Login from './login';
 import Signup from './signup';
+import Hello from './hello';
 
 class App extends Component {
   render() {
@@ -17,6 +18,9 @@ class App extends Component {
           <Link className={'nav-link'} to={'/signup/'}>
             Signup
           </Link>
+          <Link className={'nav-link'} to={'/hello/'}>
+            Hello
+          </Link>
         </nav>
         <main>
           <h1>Ahhh after 10,000 years I'm free. Time to conquer the Earth!</h1>
@@ -24,6 +28,7 @@ class App extends Component {
           <Switch>
             <Route exact path={'/login/'} component={Login} />
             <Route exact path={'/signup/'} component={Signup} />
+            <Route exact path={'/hello/'} component={Hello} />
             <Route path={'/'} render={() => <div>Home again</div>} />
           </Switch>
         </main>
